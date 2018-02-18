@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 // Connection string
-var dburl = 'mongodb://127.0.0.1:10180/mobileapp';
+var dburl = 'mongodb://readWrite:1234@127.0.0.1:10180/lotery';
 
 mongoose.connect(dburl);
 // When the connection is made
@@ -38,3 +38,4 @@ process.once('SIGUSR2', function(){
 });
 
 // Bring in schemas and models
+require('./models/modelos.js');
